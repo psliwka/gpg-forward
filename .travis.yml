@@ -1,5 +1,9 @@
 language: python
 
+install: pip install .
+
+script: gpg-forward --help
+
 deploy:
   provider: pypi
   user: psliwka-deploys
