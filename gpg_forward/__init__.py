@@ -1,5 +1,9 @@
 import argparse
+import pkg_resources
 import subprocess
+
+
+__version__ = pkg_resources.get_distribution(__name__).version
 
 
 def normalize_stdout(stdout):
@@ -87,6 +91,8 @@ def forward_agent(destination):
 
 def parse_args():
     parser = argparse.ArgumentParser(description=forward_agent.__doc__)
+    parser.add_argument('--version', action='version',
+                        version=f'%(prog)s {__version__}')
     parser.add_argument('destination', help=(
         '[user@]hostname '
         '(or ssh://[user@]hostname[:port] in recent OpenSSH versions)'))
