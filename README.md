@@ -14,7 +14,9 @@ Requiremets
 Installation
 ------------
 
-TBD
+```sh
+$ pip install gpg-forward
+```
 
 Usage
 -----
