@@ -94,9 +94,7 @@ def parse_args():
     parser.add_argument('--version', action='version',
                         version=f'%(prog)s {__version__}')
     parser.add_argument('destination', help=(
-        '[user@]hostname '
-        '(or ssh://[user@]hostname[:port] in recent OpenSSH versions)'))
-    # TODO: check in which version the ssh:// syntax has been introduced
+        '[user@]hostname (or ssh://[user@]hostname[:port] in OpenSSH 7.7+)'))
     return parser.parse_args()
 
 
